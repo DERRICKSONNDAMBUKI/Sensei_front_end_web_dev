@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.createElement("myHero")
+    </script>
+    <style>
+        myHero {
+            display: block;
+            background-color: #dddddd;
+            padding: 50px;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: turquoise;
+        }
+
+        .menu {
+            float: left;
+            width: 20%;
+        }
+
+        .menuitem {
+            padding: 8px;
+            margin-top: 7px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        .right {
+            background-color: rgb(0, 177, 236);
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+
+        @media only screen and (max-width:800px) {
+
+            /* For tablets: */
+            .main {
+                width: 80%;
+                padding: 0;
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+
+            /* For mobile phones: */
+            .menu,
+            .main,
+            .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family:Verdana;">
+
+    <div style="background-color:#14dbcb;padding:15px;">
+        <h1>RICKY SENSEI</h1>
+    </div>
+
+    <div style="overflow:auto">
+        <div class="menu">
+            <div class="menuitem">Chai</div>
+            <div class="menuitem">Kahawa</div>
+            <div class="menuitem">Maziwa</div>
+            <div class="menuitem">Mandazi</div>
+        </div>
+
+        <div class="main">
+            <h2>ABOUT RICKY</h2>
+            Everything we do is nothing if it doesn't come from our hearts.Think like a man but a act like a woman,and this is how you will survive in this world.Responsibilities are all we have that show wes are human.
+            <img src="assets/images/sensei.png" style="width:100%">
+
+            <hr>
+            <p>out put element</p>
+            <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range" id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>Visible options</p>
+            <form action="/action_page.php" method="POST">
+                <select name="cars" size="3">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <br><br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>Multiple selected</p>
+            <form action="/action_page.php" method="POST">
+                <select name="cars" size="4" multiple>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <br><br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>TextArea</p>
+            <form action="/action_page.php" method="POST">
+                <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+                <br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>datalist</p>
+            <form action="/action_page.php" method="POST">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>password</p>
+            <form action="#" method="POST">
+                User name:<br>
+                <input type="text" name="userid">
+                <br>
+                User password:<br>
+                <input type="password" name="psw">
+            </form>
+            <hr>
+            <p>reset</p>
+            <form action="/action_page.php" method="POST">
+                First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </form>
+            <hr>
+            <p>radio buttons</p>
+            <form action="/action_page.php">
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br><br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>check box</p>
+            <form action="/action_page.php">
+                <input type="checkbox" name="vehicle1" value="Bike">I have a bike
+                <br>
+                <input type="checkbox" name="vehicle2" value="Car">I have a car
+                <br><br>
+                <input type="submit">
+            </form>
+            <hr>
+            <p>button input</p>
+            <form action="#" method="post"><input type="button" onclick="alert('Deleted!')" value="Delete">
+            </form>
+            <hr>
+            <!-- other input types are:
+    color
+    date
+    datetime-local
+    email
+    month
+    number
+    range
+    search
+    tel
+    time
+    url
+    week
+ -->
+            <p>html5 input types</p>
+            <form action="action_page.php">
+                Select your favorite color:
+                <input type="color" name="favcolor" value="#ff0000">
+                <input type="submit">
+                <br>
+                Birthday:
+                <input type="date" name="bday"><br>
+                Enter a date before 1980-01-01:
+                <input type="date" name="bday" max="1979-12-31"><br>
+                Enter a date after 2000-01-01:
+                <input type="date" name="bday" min="2000-01-02"><br>
+                Birthday (date and time):
+                <input type="datetime-local" name="bdaytime"><br>
+                E-mail:
+                <input type="email" name="email"><br>
+                Select a file: <input type="file" name="myFile">
+                <br>Birthday (month and year):
+                <input type="month" name="bdaymonth"><br>
+                Quantity (between 1 and 5):
+                <input type="number" name="quantity" min="1" max="5"><br>
+                <br>
+                <p>input restrictions</p>
+                Quantity:
+                <input type="number" name="points" min="0" max="100" step="10" value="30"><br>
+                <p>ranger</p>
+                <input type="range" name="points" min="0" max="10"><br>
+                Search Google:
+                <input type="search" name="googlesearch"><br>
+                Telephone:
+                <input type="tel" name="usrtel"><br>
+                Select a time:
+                <input type="time" name="usr_time"><br>
+                Add your homepage:
+                <input type="url" name="homepage"><br>
+                Select a week:
+                <input type="week" name="week_year"><br>not supported by firefox and Eexplorer
+
+            </form>
+            <!-- HTML5 input attributes :
+    autocomplete->on/off
+    autofocus
+    form->external form-name
+    formaction->formaction url
+    formenctype->multipart
+    formmethod->post/get
+    formnovalidate
+    formtarget->_blank/_top/_self(default)_parent
+    height and width->for type="image"
+    list->datalist id
+    min and max->lenght,data,quality
+    multiple->more than 1 value in the input
+    pattern (regexp)->eg pattern="[A-Za-z]{3}" for country code
+    placeholder->value expected
+    required
+    step
+    maxlength
+    size
+    disabled
+    value
+    ...form attributes:
+    autocomplete
+    novalidate
+
+-->
+            <hr>
+            <h1>A Heading</h1>
+            <myHero>My Hero Element</myHero>
+            <!-- HTML5 new elements:
+<article> 	Defines an article in a document
+<aside> 	Defines content aside from the page content
+<bdi> 	Isolates a part of text that might be formatted in a different direction from other text outside it
+<details> 	Defines additional details that the user can view or hide
+<dialog> 	Defines a dialog box or window
+<figcaption> 	Defines a caption for a <figure> element
+<figure> 	Defines self-contained content
+<footer> 	Defines a footer for a document or section
+<header> 	Defines a header for a document or section
+<main> 	Defines the main content of a document
+<mark> 	Defines marked/highlighted text
+<meter> 	Defines a scalar measurement within a known range (a gauge)
+<nav> 	Defines navigation links
+<progress> 	Represents the progress of a task
+<rp> 	Defines what to show in browsers that do not support ruby annotations
+<rt> 	Defines an explanation/pronunciation of characters (for East Asian typography)
+<ruby> 	Defines a ruby annotation (for East Asian typography)
+<section> 	Defines a section in a document
+<summary> 	Defines a visible heading for a <details> element
+<time> 	Defines a date/time
+<wbr> 	Defines a possible line-break
+
+
+    <article>->
+    Forum post
+    Blog post
+    Newspaper article
+Tag 	Description
+<article> 	Defines an article
+<aside> 	Defines content aside from the page content
+<details> 	Defines additional details that the user can view or hide
+<figcaption> 	Defines a caption for a <figure> element
+<figure> 	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer> 	Defines a footer for a document or section
+<header> 	Specifies a header for a document or section
+<main> 	Specifies the main content of a document
+<mark> 	Defines marked/highlighted text
+<nav> 	Defines navigation links
+<section> 	Defines a section in a document
+<summary> 	Defines a visible heading for a <details> element
+<time> 	Defines a date/time
+
+ -->
+
+            <!-- media elements:
+<audio> 	Defines sound content
+<embed> 	Defines a container for an external (non-HTML) application
+<source> 	Defines multiple media resources for media elements (<video> and <audio>)
+<track> 	Defines text tracks for media elements (<video> and <audio>)
+<video> 	Defines video or movie -->
+            <hr>
+            <section>
+                <h1>WWF</h1>
+                <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+            </section>
+
+            <section>
+                <h1>WWF's Panda symbol</h1>
+                <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+            </section>
+            <hr>
+            <nav>
+                <a href="index.html">HTML</a> |
+                <a href="../css/index.html">CSS</a> |
+                <a href="../js/index.html">JavaScript</a> |
+                <a href="../jquery/index.html">jQuery</a>
+            </nav>
+            <figure>
+                <img src="assets/images/sensei.png" alt="Sensei" style="width:100%">
+                <figcaption>Fig.1 - Sensei.</figcaption>
+            </figure>
+
+
+
+
+
+
+
+        </div>
+
+        <div class="right">
+            <h2>WHO is Ricky?</h2>
+            <p>We have also been wondering who this guy is,but I think we have a clue of who he is.Unfortunately,we lost the evidence of his existence.All we know is that Ricky is Sensei.</p>
+            <h2>What does Ricky do?</h2>
+            <p>He develops full-stack web developer.
+                he also develop android developer.</p>
+            <h2>Where do i find Ricky?</h2>
+            <p>If you find Ricky,please tell him I have been looking for him.</p>
+        </div>
+    </div>
+
+
+    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> If you want to know what I a m talking about,Resize the browser window to see the content respond to the resizing.The nature works everywhere.Put on a smile Sensei got you.</div>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
+</body>
+
+</html>

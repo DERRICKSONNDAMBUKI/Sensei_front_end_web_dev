@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC Rongo</title>
+    <style>
+        header {
+            text-align: center;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="assets/css/gdscRongo.css"> -->
+</head>
+
+<body>
+    <header id="gdsc-header" style="background-color: dodgerblue;">
+        <h1>Google Developers Students Club</h1>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li><a href="#register">Register to be a member</a></li>
+                    <li><a href="#upcomingEvent">Upcoming Events</a></li>
+                    <li><a href="#pastEvent">Past Events</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <a href="#">HTML</a> |
+                <a href="#">CSS</a> |
+                <a href="#">JavaScript</a> |
+                <a href="#">jQuery</a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <h3>Welcome to <abbr title="Google Developers Student Club Rongo University">GDSC RU</abbr></h3>
+    <p><b>Notification: <del>Tomorrow there will be an event.</del></b></p>
+    <p>Learn the following techonlogies</p>
+    <pre id="pre">
+        web Development
+        Android Development
+        Firebase
+        Flutter
+    </pre>
+    <a href="gdscRongo.html">GDSC Rongo University</a>
+    <div class="ricky-photo">
+        <h3>This <small>is</small> my Photo</h3>
+        <!-- ricky's photo -->
+        <!--  <img src="url"> -->
+        <!-- <source media="(min-width: 600px)" srcset="">
+        <picture>
+            <source media="(min-width: 1000px)" srcset="assets/images/r_sensei.png" style="width: 80%;height: auto;">
+            <source media="(min-width: 800px)" srcset="assets/images/sensei.png">
+            <img src="assets/images/sensei.png" alt="ricky's image" width="100%" height="auto">
+        </picture> -->
+        <img id="senseiPhoto" src="assets/images/sensei.png" alt="ricky's image" width="100%" height="auto" onclick="changeImgFunc()">
+    </div>
+    <p>I usually say: <q>The is no another chance like this one. <br>Take your chances and be patient with the reward time, <mark>never give</mark></q></p>
+    <button style="background-color:turquoise;" onclick="hideFunc();">Click to hide Elements</button>
+    <ul>
+        <h4>Languages that you can learn</h4>
+        <li>C/C++</li>
+        <li>Kotlin</li>
+        <li>Java</li>
+    </ul>
+    <ol type="i" class="hide">
+        <h4>APIs that you can integrate into your website</h4>
+        <li>Google maps integration</li>
+        <li>M-pesa integration</li>
+        <li>Google authentication</li>
+    </ol>
+    <a href="#gdsc-header">Go to GDSC RU</a>
+
+    <table width="100%" class="hide">
+        <!-- <tfoot>Phone numbers</tfoot> -->
+        <thead>
+            <tr>
+                <th>name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ricky</td>
+                <td>0712345678</td>
+                <td>0787654321</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 60%;">
+        <caption><b>Phone contacts</b></caption>
+        <tr>
+            <th>name</th>
+            <td>Sensei</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>0712345678</td>
+        </tr>
+        <tr>
+            <td>0787654321</td>
+        </tr>
+    </table>
+    <dl>
+        <dt>Ricky</dt>
+        <dd>-Fullstack web developer</dd>
+        <dt>Sensei</dt>
+        <dd>-android developer</dd>
+        <dd>-IOT developer</dd>
+    </dl>
+    <form action="/url/php script">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <p>Drop Down</p>
+    <form action="/url" method="post">
+        <select name="cars">
+            <option value="default" selected>Default</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select><br>
+        <input type="submit">
+    </form>
+    <!-- <iframe src="frame.html" frameborder="1px" width="600" height="300"></iframe> -->
+    <video width="320" height="240" src="assets/video/movie.mp4" controls autoplay>
+        Your browser does not support the video tag
+        <!-- <source src="assets/video/movie.mp4" type="video/mp4"> -->
+
+    </video>
+    <!-- <audio src=""></audio> -->
+    <!-- <object data="./graphics.html" type="text/html"></object> -->
+    <!-- <embed src="" type="">  -->
+    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="5px"></iframe> -->
+
+    <!-- DOM -->
+    <div id="div1">
+        <p id="p1">This is a paragraph usin Dom</p>
+        <p id="p2">This is another paragraph</p>
+    </div>
+    <script>
+        var para = document.createElement("h5");
+        var node = document.createTextNode("This is the header of the paragraph using DOM");
+        para.appendChild(node);
+        var parent = document.getElementById("div1")
+        var child = document.getElementById("p1")
+        parent.insertBefore(para, child);
+        // parent.removeChild(child)
+        // parent.replaceChild(para, child)
+        // var myCollection = document.getElementsByTagName("p") //HtmlCollection or
+        // var myCollection = document.querySelectorAll("p") //nodelist only accessed by their index number
+        var i;
+        for (let i = 0; i < myCollection.length; i++) {
+            myCollection[i].style.backgroundColor = "red";
+
+        }
+    </script>
+    <!-- BOM -->
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
+    <hr margin="30px">
+    <input type="button" value="Back" onclick="goBack()">
+
+    <h2>Store and retrieve ata from html local storage.</h2>
+    <p id="demo"></p>
+    <script>
+        var myObj, myJSON, text, obj;
+        // storing data
+        myObj = {
+            "name": "Ricky",
+            "age": 31,
+            "city": "Nakuru"
+        };
+        myJSON = JSON.stringify(myObj)
+        localStorage.setItem("testJson", myJSON)
+        // retrieving data:
+        text = localStorage.getItem("testJson");
+        obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML = "Name:" + obj.name + "<br>City:" + obj.city
+    </script>
+    <hr margin="30px">
+    <p id="demo"></p>
+    <!-- Get data as json from server -->
+    <!-- <script>
+        var xmlhttp = new XMLHttpRequest()
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myObj = JSON.parse(this.responseText)
+                document.getElementById("demo").innerHTML = myObj.name
+            }
+        }
+        xmlhttp.open("GET", "/user", true) //use POST to send data
+        // xmlhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded") //or applicatio/json
+        // var dbParam = JSON.stringify(obj)
+        // xmlhttp.send("x=" + dbParam) //or just dbParam
+        xmlhttp.send()
+    </script> -->
+
+    <p>out put element</p>
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>Visible options</p>
+    <form action="/action_page.php" method="POST">
+        <select name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>Multiple selected</p>
+    <form action="/action_page.php" method="POST">
+        <select name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>TextArea</p>
+    <form action="/action_page.php" method="POST">
+        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+        <br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>datalist</p>
+    <form action="/action_page.php" method="POST">
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>password</p>
+    <form action="#" method="POST">
+        User name:<br>
+        <input type="text" name="userid">
+        <br>
+        User password:<br>
+        <input type="password" name="psw">
+    </form>
+    <hr>
+    <p>reset</p>
+    <form action="/action_page.php" method="POST">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    <hr>
+    <p>radio buttons</p>
+    <form action="/action_page.php">
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>check box</p>
+    <form action="/action_page.php">
+        <input type="checkbox" name="vehicle1" value="Bike">I have a bike
+        <br>
+        <input type="checkbox" name="vehicle2" value="Car">I have a car
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <p>button input</p>
+    <form action="#" method="post"><input type="button" onclick="alert('Deleted!')" value="Delete">
+    </form>
+    <hr>
+    <!-- other input types are:
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+-->
+    <p>html5 input types</p>
+    <form action="action_page.php">
+        Select your favorite color:
+        <input type="color" name="favcolor" value="#ff0000">
+        <input type="submit">
+        <br>
+        Birthday:
+        <input type="date" name="bday"><br>
+        Enter a date before 1980-01-01:
+        <input type="date" name="bday" max="1979-12-31"><br>
+        Enter a date after 2000-01-01:
+        <input type="date" name="bday" min="2000-01-02"><br>
+        Birthday (date and time):
+        <input type="datetime-local" name="bdaytime"><br>
+        E-mail:
+        <input type="email" name="email"><br>
+        Select a file: <input type="file" name="myFile">
+        <br>Birthday (month and year):
+        <input type="month" name="bdaymonth"><br>
+        Quantity (between 1 and 5):
+        <input type="number" name="quantity" min="1" max="5"><br>
+        <br>
+        <p>input restrictions</p>
+        Quantity:
+        <input type="number" name="points" min="0" max="100" step="10" value="30"><br>
+        <p>ranger</p>
+        <input type="range" name="points" min="0" max="10"><br>
+        Search Google:
+        <input type="search" name="googlesearch"><br>
+        Telephone:
+        <input type="tel" name="usrtel"><br>
+        Select a time:
+        <input type="time" name="usr_time"><br>
+        Add your homepage:
+        <input type="url" name="homepage"><br>
+        Select a week:
+        <input type="week" name="week_year"><br>not supported by firefox and Eexplorer
+
+    </form>
+    <!-- HTML5 input attributes :
+autocomplete->on/off
+autofocus
+form->external form-name
+formaction->formaction url
+formenctype->multipart
+formmethod->post/get
+formnovalidate
+formtarget->_blank/_top/_self(default)_parent
+height and width->for type="image"
+list->datalist id
+min and max->lenght,data,quality
+multiple->more than 1 value in the input
+pattern (regexp)->eg pattern="[A-Za-z]{3}" for country code
+placeholder->value expected
+required
+step
+maxlength
+size
+disabled
+value
+...form attributes:
+autocomplete
+novalidate
+
+-->
+    <hr>
+    <h1>A Heading</h1>
+    <myHero>My Hero Element</myHero>
+    <!-- HTML5 new elements:
+<article> 	Defines an article in a document
+<aside> 	Defines content aside from the page content
+<bdi> 	Isolates a part of text that might be formatted in a different direction from other text outside it
+<details> 	Defines additional details that the user can view or hide
+<dialog> 	Defines a dialog box or window
+<figcaption> 	Defines a caption for a <figure> element
+<figure> 	Defines self-contained content
+<footer> 	Defines a footer for a document or section
+<header> 	Defines a header for a document or section
+<main> 	Defines the main content of a document
+<mark> 	Defines marked/highlighted text
+<meter> 	Defines a scalar measurement within a known range (a gauge)
+<nav> 	Defines navigation links
+<progress> 	Represents the progress of a task
+<rp> 	Defines what to show in browsers that do not support ruby annotations
+<rt> 	Defines an explanation/pronunciation of characters (for East Asian typography)
+<ruby> 	Defines a ruby annotation (for East Asian typography)
+<section> 	Defines a section in a document
+<summary> 	Defines a visible heading for a <details> element
+<time> 	Defines a date/time
+<wbr> 	Defines a possible line-break
+
+
+<article>->
+Forum post
+Blog post
+Newspaper article
+Tag 	Description
+<article> 	Defines an article
+<aside> 	Defines content aside from the page content
+<details> 	Defines additional details that the user can view or hide
+<figcaption> 	Defines a caption for a <figure> element
+<figure> 	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer> 	Defines a footer for a document or section
+<header> 	Specifies a header for a document or section
+<main> 	Specifies the main content of a document
+<mark> 	Defines marked/highlighted text
+<nav> 	Defines navigation links
+<section> 	Defines a section in a document
+<summary> 	Defines a visible heading for a <details> element
+<time> 	Defines a date/time
+
+-->
+
+    <!-- media elements:
+<audio> 	Defines sound content
+<embed> 	Defines a container for an external (non-HTML) application
+<source> 	Defines multiple media resources for media elements (<video> and <audio>)
+<track> 	Defines text tracks for media elements (<video> and <audio>)
+<video> 	Defines video or movie -->
+    <hr>
+    <section>
+        <h1>WWF</h1>
+        <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+
+    <section>
+        <h1>WWF's Panda symbol</h1>
+        <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <hr>
+    <figure>
+        <img src="assets/images/sensei.png" alt="Sensei" style="width:100%">
+        <figcaption>Fig.1 - Sensei.</figcaption>
+    </figure>
+
+    </div>
+    </div>
+
+
+    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> If you want to know what I a m talking about,Resize the browser window to see the content respond to the resizing.The nature works everywhere.Put on a smile Sensei got you.</div>
+
+
+    <hr margin="30px">
+    <!-- <script src="assets/js/gdscRongo.js"> -->
+    </script>
+    <footer margin="30px">
+        <span>GDSC</span>
+        <span style="background-color: turquoise; padding: 8px;">Rongo University</span>
+    </footer>
+</body>
+
+</html>

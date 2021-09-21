@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ricky Sensei">
+    <!-- refresh page every 30s -->
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <title>RICKY SENSEI WEB DEV</title>
+    <!-- inline css -->
+    <style>
+        header {
+            text-align: center;
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="https://www.weblink.com/html/styles.css"> -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header id="sensei-head" style="background-color: dodgerblue;">
+        <h1 style="font-size: 60px; padding: 20px;">RICKY <em>SENSEI</em></h1>
+        <div class="nav-bar">
+            <ul>
+                <li><a href=" #home">HOME</a></li>
+                <li><a href="#contact">CONTACTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <!-- <li><a href="#logout" class="right">Logout</a></li> -->
+            </ul>
+        </div>
+
+    </header>
+
+    <p style="color:darkgreen; font-family:verdana;">This is <strong>my website,</strong><br><i>feel free to take a look.</i></p>
+    <hr>
+    <h2>Welcome to my <abbr title="Web Development"> WD!</abbr></h2>
+    <p title="starting..."><b>So let's start...<del>ok</del></b></p>
+    <pre id="pre">
+        I am a full-stack web developer.
+        I am an android developer.
+    </pre>
+    <!-- 
+    _blank - Opens the linked document in a new window or tab
+    _self - Opens the linked document in the same window/tab as it was clicked (this is default)
+    _parent - Opens the linked document in the parent frame
+    _top - Opens the linked document in the full body of the window
+    framename - Opens the linked document in a named frame
+ -->
+    <p id="home">Link to home</p>
+    <button onclick="homeFunc();">Home button</button>
+    <a href="index.html" target="_top" title="Home page">Home </a>
+    <div class="ricky-photo">
+        <h3>This <small>is</small> my Photo</h3>
+        <!-- ricky's photo -->
+        <!--  <img src="url"> -->
+        <source media="(min-width: 600px)" srcset="">
+        <picture>
+            <source media="(min-width: 1000px)" srcset="assets/images/r_sensei.png" style="width: 80%;height: auto;">
+            <source media="(min-width: 800px)" srcset="assets/images/sensei.png">
+            <img src="assets/images/sensei.png" alt="ricky's image" width="100%" height="auto">
+        </picture>
+        <img id="senseiPhoto" src="assets/images/sensei.png" alt="ricky's image" width="100%" height="auto" onclick="changeImgFunc()">
+    </div>
+
+    <p>I usually say: <q>The is no another chance like this one. <br>Take your chances and be patient with the reward time, <mark>never give</mark></q></p>
+    <button style="background-color:turquoise;" onclick="hideFunc();">Click to hide Elements</button>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ol type="i" class="hide">
+        <li>Kahawa</li>
+        <li>Chai</li>
+        <li>Maziwa</li>
+    </ol>
+    <!--  <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>  -->
+    <!--  <a href="index.html#C4">Jump to Chapter 4</a>  -->
+    <a href="#sensei-head">RICKY SENSEI</a>
+    <table width="100%" class="hide">
+        <!-- <tfoot>Phone numbers</tfoot> -->
+        <thead>
+            <tr>
+                <th>name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ricky</td>
+                <td>0712345678</td>
+                <td>0787654321</td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width: 60%;">
+        <caption><b>Phone contacts</b></caption>
+        <tr>
+            <th>name</th>
+            <td>Sensei</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>0712345678</td>
+        </tr>
+        <tr>
+            <td>0787654321</td>
+        </tr>
+    </table>
+    <!-- description list -->
+    <dl>
+        <dt>Ricky</dt>
+        <dd>-Fullstack web developer</dd>
+        <dt>Sensei</dt>
+        <dd>-android developer</dd>
+        <dd>-IOT developer</dd>
+    </dl>
+    <hr margin="20px">
+    <!-- nested list -->
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <ol start="13" type="a">
+            <li>Black Tea</li>
+            <li>Grean Tea</li>
+        </ol>
+        <li>Milk</li>
+    </ul>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <hr>
+    <p>Drop Down</p>
+    <form action="/action_page.php" method="post">
+        <select name="cars">
+            <option value="default" selected>Default</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select><br>
+        <input type="submit">
+    </form>
+    <!-- <iframe src="frame.html" frameborder="1px" width="600" height="300"></iframe> -->
+    <hr margin="30px">
+    <script src=" assets/js/main.js">
+    </script>
+</body>
+<footer margin="30px">
+    <span>NDAMBUKI</span>
+    <span style="background-color: turquoise; padding: 8px;">CONSOLIDATE</span>
+</footer>
+
+</html>

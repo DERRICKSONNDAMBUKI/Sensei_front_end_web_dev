@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom HTML</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph</p>
+        <p id="p2">This is another paragraph</p>
+    </div>
+    <script>
+        var para = document.createElement("h1");
+        var node = document.createTextNode("This is the header of the paragraph");
+        para.appendChild(node);
+        var parent = document.getElementById("div1")
+        var child = document.getElementById("p1")
+        parent.insertBefore(para, child);
+        // parent.removeChild(child)
+        // parent.replaceChild(para, child)
+        // var myCollection = document.getElementsByTagName("p") //HtmlCollection or
+        var myCollection = document.querySelectorAll("p") //nodelist only accessed by their index number
+        var i;
+        for (let i = 0; i < myCollection.length; i++) {
+            myCollection[i].style.backgroundColor = "red";
+
+        }
+    </script>
+    <!-- BOM -->
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
+    <hr margin="30px">
+    <input type="button" value="Back" onclick="goBack()">
+</body>
+
+</html>

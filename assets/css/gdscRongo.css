@@ -1,0 +1,91 @@
+body {
+    background-color: powderblue;
+    /* background-color: royalblue; */
+    margin: 50px;
+}
+
+html {
+    border: none;
+    border-radius: 5px;
+}
+
+#pre {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+#ricky-photo img {
+    image-rendering: pixelated;
+    float: left;
+}
+
+/* #ricky h3 {
+    float: right;
+} */
+
+a:hover {
+    color: darkorange;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: left;
+}
+
+table {
+    margin: 30px;
+    border-spacing: 5px;
+}
+
+th {
+    text-align: center;
+    background-color: black;
+    color: royalblue;
+}
+
+/* tr:nth-child(even) {
+    background-color: royalblue;
+} */
+/* td:nth-child(even) {
+    background-color: whitesmoke;
+} */
+.nav-bar {
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+    overflow: hidden;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    background-color: teal;
+}
+
+.nav-bar.right {
+    text-align: right;
+
+}
+
+hr {
+    margin: 30px;
+    padding: 10;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricky Gmap</title>
+    <script>
+        function mymap() {
+            var mapOptions = {
+                centre: new google.maps.LatLng(51.5, -0.12),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="map" style="width: 400px;height: 400px;background-color: aqua;">my map goes here</div>
+
+    <!-- get your location -->
+    <hr style="margin: 30px;">
+    <p>Click to the buttom to get your coordinates.</p>
+    <button onclick="getLocation();">Try it</button>
+    <p id="demo"></p>
+    <hr>
+    <div id="mapholder"></div>
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported in this browser."
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+            var latlng = position.coords.latitude + "," + position.coords.longitude;
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" +
+                latlon + "&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU"
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }
+        //To use this code on your website, get a free API key from Google.
+        //Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information in unavailable."
+                    break;
+                case error.TIMEOUT:
+                    X.innerHTML = "The request to get user location time out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                default:
+                    break;
+            }
+        }
+    </script>
+    <p>Click to the buttom to get your coordinates.</p>
+    <button onclick="getLocation();">Try it</button>
+    <p id="demo1"></p>
+    <hr>
+    <p>Show your position in map</p>
+    <div id="mapholder1"></div>
+    <script>
+        var y = document.getElementById("demo1");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                y.innerHTML = "Geolocation is not supported in this browser."
+            }
+        }
+
+        function showPosition(position) {
+            // x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+            // var latlng = position.coords.latitude + "," + position.coords.longitude;
+            // var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" +
+            //     latlon + "&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU"
+            // document.getElementById("mapholder1").innerHTML = "<img src='" + img_url + "'>";
+
+            // show in map
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            var latlon = new google.maps.LatLng(lat, lon)
+            var mapholder1 = getElementById("mapholder1")
+            mapholder1.style.height = '250px';
+            mapholder1.style.width = '500px';
+
+            var myOptions = {
+                centre: latlon,
+                zoom: 14,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                navigationControlOptions: {
+                    style: google.maps.navigationControlStyle.SMALL
+                }
+            }
+            var map = new google.maps.Map(document.getElementById("mapholder1"), myOptions);
+            var marker = new google.maps.Marker({
+                position: latlon,
+                map: map,
+                title: "You are here!"
+            })
+        }
+        //To use this code on your website, get a free API key from Google.
+        //Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    y.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    y.innerHTML = "Location information in unavailable."
+                    break;
+                case error.TIMEOUT:
+                    y.innerHTML = "The request to get user location time out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    y.innerHTML = "An unknown error occurred."
+                default:
+                    break;
+            }
+        }
+    </script>
+    <script src="https://maps.gooleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=mymap"></script>
+</body>
+
+</html>
